@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="1234.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="romeroinventoryappc482.View_Controller.MainController">
+   <children>
+      <Text layoutX="41.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e5e8" height="471.0" layoutX="21.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="583.0" />
+      <Text layoutX="54.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parts" wrappingWidth="102.6708984375">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="inventorySearchPartButton" layoutX="301.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleInventorySearchPart" text="Search" />
+      <TextField fx:id="inventorySearchPartField" layoutX="366.0" layoutY="208.0" prefHeight="31.0" prefWidth="214.0" />
+      <TableView fx:id="partsTable" layoutX="54.0" layoutY="262.0" prefHeight="200.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="partIdColumn" editable="false" prefWidth="87.0" text="Part ID" />
+          <TableColumn fx:id="partNameColumn" editable="false" prefWidth="157.0" text="Part Name" />
+            <TableColumn fx:id="partInventoryColumn" editable="false" prefWidth="126.0" text="Inventory Level" />
+            <TableColumn fx:id="partPriceColumn" editable="false" prefWidth="152.0" text="Price/Cost per Unit" />
+        </columns>
+      </TableView>
+      <Button fx:id="inventoryAddPartButton" layoutX="231.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleInventoryAddPart" prefHeight="48.0" prefWidth="103.0" text="Add" />
+      <Button fx:id="inventoryModifyPartButton" layoutX="350.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleInventoryModifyPart" prefHeight="48.0" prefWidth="103.0" text="Modify" />
+      <Button fx:id="inventoryDeletePartButton" layoutX="468.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleInventoryDeletePart" prefHeight="48.0" prefWidth="103.0" text="Delete" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e5e8" height="471.0" layoutX="627.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="583.0" />
+      <Text layoutX="660.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" wrappingWidth="155.6708984375">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="inventorySearchProductsButton" layoutX="906.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleInventorySearchProduct" text="Search" />
+      <TextField fx:id="inventorySearchProductField" layoutX="971.0" layoutY="208.0" prefHeight="31.0" prefWidth="214.0" />
+      <TableView fx:id="productTable" layoutX="660.0" layoutY="262.0" prefHeight="200.0" prefWidth="524.0">
+         <columns>
+            <TableColumn fx:id="productIdColumn" editable="false" prefWidth="87.0" text="Product ID" />
+            <TableColumn fx:id="productNameColumn" editable="false" prefWidth="157.0" text="Product Name" />
+            <TableColumn fx:id="productInventoryColumn" editable="false" prefWidth="126.0" text="Inventory Level" />
+            <TableColumn fx:id="productPriceColumn" editable="false" prefWidth="152.0" text="Price per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="inventoryAddProductButton" layoutX="836.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleInventoryAddProduct" prefHeight="48.0" prefWidth="103.0" text="Add" />
+      <Button fx:id="inventoryModifyProductButton" layoutX="959.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleInventoryModifyProduct" prefHeight="48.0" prefWidth="103.0" text="Modify" />
+      <Button fx:id="inventoryDeleteProductButton" layoutX="1075.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleInventoryDeleteProduct" prefHeight="48.0" prefWidth="103.0" text="Delete" />
+      <Button fx:id="exitButton" layoutX="1107.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="51.0" prefWidth="103.0" text="Exit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
